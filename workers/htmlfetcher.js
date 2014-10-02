@@ -1,6 +1,6 @@
 // eventually, you'll have some code here that uses the code in `archive-helpers.js`
 // to actually download the urls you want to download.
-var archive = require("../helpers/archive-helpers.js")
+var archive = require("/Users/student/Desktop/2014-09-web-historian/helpers/archive-helpers.js")
 var fs = require("fs");
 var path = require("path");
 var request = require("http-request");
@@ -17,7 +17,6 @@ var fetchHtml = function(){
               console.log("Couldn't fetch the html: " + url);
             } else {
               if (data.code === 200){
-                console.log("second trigger - have we screwed up data.status?")
                 fs.writeFile(archive.paths.archivedSites + "/" + url, data.buffer.toString(), function(err){
                   if(err){
                     console.log("Couldn't write to file");

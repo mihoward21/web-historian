@@ -18,7 +18,6 @@ exports.handleRequest = function (req, res) {
     res.end();
   } else if (req.method === "GET" && req.url === "/") {
     res.writeHead(200, httpHelper.headers)
-    fetch.fetch()
     httpHelper.serveAssets(res, path.join(__dirname, "../web/public/index.html"), "end")
   } else if (req.method === "GET" && req.url === "/styles.css") {
     var headers = JSON.stringify(httpHelper.headers);
